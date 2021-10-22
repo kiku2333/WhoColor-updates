@@ -2071,7 +2071,10 @@ Wikiwho = {
                             alert("Please select a color for main group first.");
                             return;
                         }
-                        var percent = 0.8 * rank/(Wikiwho.numOfWarringGroups[parentGroup] - 1);
+                        var percent = 0;
+                        if(Wikiwho.numOfWarringGroups[parentGroup] != 1){
+                            percent = 0.8 * rank/(Wikiwho.numOfWarringGroups[parentGroup] - 1);
+                        }
                         var baseColor = Wikiwho.warringCampsColor[parentGroup];
                         var color = Wikiwho.getBrighterColor(baseColor,percent);
                         var contrastColor = Wikiwho.getContrastingColor(color);
