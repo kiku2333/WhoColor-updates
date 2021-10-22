@@ -4,7 +4,7 @@ This userscript updates the [WhoColor](https://github.com/wikiwho/WhoColor) user
 Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and Firefox:
 
 - First install one of:
- - `Tampermonkey <https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/>`_ for Chrome
+ - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/) for Chrome
  - `Tampermonkey <https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/>`_ for Firefox
  - `Greasemonkey <https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/>`_ for Firefox
 - Open `user script <https://github.com/kiku2333/WhoColor-updates/blob/main/WhoColor-updates.user.js>`_ and click on ``Raw`` button on the top right
