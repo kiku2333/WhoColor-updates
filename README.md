@@ -1,6 +1,5 @@
 # WhoColor-updates
-# Updated WhoColor 
-This userscript updates the `WhoColor <https://github.com/wikiwho/WhoColor>`_ userscript.
+This userscript updates the [WhoColor](https://github.com/wikiwho/WhoColor) userscript.
 # Installation
 Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and Firefox:
 
