@@ -1594,10 +1594,10 @@ Wikiwho = {
     getGroupInfo: function(){
         var groupURL = "";
         if(Wikiwho.mode == "TCM"){
-            groupURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/TCM-user-cluster-result.csv"
+            groupURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-user-cluster-result-after-join.csv";
         }
         else{
-            groupURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-user-cluster-result.csv"
+            groupURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-user-cluster-result.csv";
         }
         $.ajax({
             url: groupURL,
@@ -1735,6 +1735,23 @@ Wikiwho = {
             }
         }
     },
+    colorAnonEditors: function(){
+        for (var i = 0; i < Wikiwho.present_editors.length; i++) {
+            var author_name = Wikiwho.present_editors[i][0];
+            var author_is_anonymous = author_name.startsWith('0|');
+            var author_id = Wikiwho.present_editors[i][1];
+            if (author_is_anonymous){
+                //color with a neutral color
+                var color = "#D3D3D3";
+                var contrastColor = Wikiwho.getContrastingColor(color);
+                $("span.token-editor-"+author_id).css({"background-color": color,
+                                                       "color": contrastColor[0]}).find("*").css("color", contrastColor[1]);
+                if (!(Wikiwho.coloredAnonEditors.includes(author_id))){
+                    Wikiwho.coloredAnonEditors.push(author_id);
+                }
+            }
+        }
+    },
     openCampsView: function() {
         // Remove colorization
         $('span.editor-token').css({'background-color': '', 'color': ''}).find("*").css('color', '');
@@ -1751,6 +1768,8 @@ Wikiwho = {
             Wikiwho.groupInitialized = true;
         }
         Wikiwho.fillPanelCamps();
+        // Color anonymous editors
+        Wikiwho.colorAnonEditors();
 
         Wikiwho.provenanceViewOpen = false;
         Wikiwho.conflictViewOpen = false;
@@ -1768,6 +1787,7 @@ Wikiwho = {
         $("#wikiwhoAuthorList").show();
         $("#wikiwhoGroupListHeader").hide();
         $("#wikiwhoGroupList").hide();
+        $('span.editor-token').css({'background-color': '', 'color': ''}).find("*").css('color', '');
         // Remove colors for tokens and right panel
         for (let k in Wikiwho.coloredGroups){
             var color = Wikiwho.coloredGroups[k];
@@ -1779,17 +1799,7 @@ Wikiwho = {
             $("span.group-"+k).css({"background-color": "", "color": ""}).find("*").css("color", "");
             $("#wikiwhoGroupList").css({"background-color": "", "color": ""});
         }
-        // Recolor tokens
-        Object.keys(Wikiwho.coloredAuthors).forEach(function(authorid) {
-            var color = Wikiwho.coloredAuthors[authorid];
-            var contrastColor = Wikiwho.getContrastingColor(color);
-            $("span.token-editor-"+authorid).css({"background-color": color,
-                                                  "color": contrastColor[0]}).find("*").css("color", contrastColor[1]);
-            $('.hvauthorid-'+authorid).css({
-                'background-color': color,
-                'color': contrastColor[0]
-            });
-        });
+        
         Wikiwho.provenanceViewOpen = true;
         Wikiwho.campsViewOpen = false;
         $('#provenanceviewbutton').addClass('provenanceviewbuttonopen');
@@ -1798,7 +1808,7 @@ Wikiwho = {
     getWarringGroupInfo: function(){
         var revertURL = "";
         if(Wikiwho.mode == "TCM"){
-            revertURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/TCM-mutual-and-min-revert.csv";
+            revertURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-mutual-and-min-revert-after-join.csv";
         }
         else{
             revertURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-mutual-and-min-revert-greater-than-10.csv";
@@ -1971,10 +1981,6 @@ Wikiwho = {
             Wikiwho.keptWarringCamps[group_id] = [];
             var counter = 0;
             for(var j = 0; j < sorted_groups.length; j++){
-                // Shows top 10 only
-//                 if (counter>9){
-//                     break;
-//                 }
                 var fight_group_id = sorted_groups[j][0];
                 if (!(Object.keys(Wikiwho.groupScore).includes(fight_group_id)) | (fight_group_id == group_id)){
                     continue;
@@ -2116,6 +2122,7 @@ Wikiwho = {
             Wikiwho.groupInitialized = true;
         }
         Wikiwho.fillPanelWarringCamps();
+        Wikiwho.colorAnonEditors();
 
         Wikiwho.provenanceViewOpen = false;
         Wikiwho.conflictViewOpen = false;
@@ -2134,6 +2141,7 @@ Wikiwho = {
         $("#wikiwhoAuthorList").show();
         $("#wikiwhoGroupListHeader").hide();
         $("#wikiwhoGroupList").hide();
+        $('span.editor-token').css({'background-color': '', 'color': ''}).find("*").css('color', '');
         for(let k in Wikiwho.coloredWarringGroups){
             var color = Wikiwho.coloredWarringGroups[k];
             var contrastColor = Wikiwho.getContrastingColor(color);
@@ -2153,17 +2161,6 @@ Wikiwho = {
             $("span.group-"+k).css({"background-color": "", "color": ""}).find("*").css("color", "");
             $("#wikiwhoGroupList").css({"background-color": "", "color": ""});
         }
-        // Recolor tokens
-        Object.keys(Wikiwho.coloredAuthors).forEach(function(authorid) {
-            var color = Wikiwho.coloredAuthors[authorid];
-            var contrastColor = Wikiwho.getContrastingColor(color);
-            $("span.token-editor-"+authorid).css({"background-color": color,
-                                                  "color": contrastColor[0]}).find("*").css("color", contrastColor[1]);
-            $('.hvauthorid-'+authorid).css({
-                'background-color': color,
-                'color': contrastColor[0]
-            });
-        });
 
         Wikiwho.provenanceViewOpen = true;
         Wikiwho.warringViewOpen = false;
