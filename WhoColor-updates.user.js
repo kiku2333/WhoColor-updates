@@ -150,6 +150,7 @@ Wikiwho = {
     groupMaxEdits:{},
     // Stores the number of warring groups showed on the right bar, used to compute sub group colors
     numOfWarringGroups:{},
+    coloredAnonEditors:[],
 
     /* Methods */
 
