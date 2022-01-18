@@ -27,5 +27,6 @@ The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` a
     * Click on the plus sign before group name to expand/collapse the group. The editors in this group who contributed to this article will be shown after expand the group. Some editors' name are not shown completely, move the mouse to the editor to show full name. 
     * Click on the group name on the right bar to color/uncolor the group and its corresponding tokens. The max number of color allowed are 20. Top 3 groups are colored automatically once the tab is open.
     * The tokens added by anonymous editors are shown in light gray. 
+    * All colored tokens will be removed if the tab is closed.
 * ``Warring Camps``: Shows the group conflict result. 
 
