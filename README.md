@@ -13,7 +13,7 @@ Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and
 
 # WhoColor Tabs
 The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` are from the original WhoColor. ``Camps`` and  ``Warring Camps`` are added in this update version.\
-**<br /><br />Note: There is a selection part above the tabs. This part is used for testing, and will be removed later. The selection part allows you to select the mode. TCM shows the results obtained with TCM articles. All Data shows the results obtained with all data. Finally we will remove the TCM part, since it only used for testing.<br /><br />Currently, you need to manually select the mode and click on the change mode button to load the data. If the chagne mode is not clicked, the results for Camps and Warring Camps will not shown.**
+**<br />Note: There is a selection part above the tabs. This part is used for testing, and will be removed later. The selection part allows you to select the mode. TCM shows the results obtained with TCM articles. All Data shows the results obtained with all data. Finally we will remove the TCM part, since it only used for testing.<br /><br />Currently, you need to manually select the mode and click on the change mode button to load the data. If the chagne mode is not clicked, the results for Camps and Warring Camps will not shown.**
 * [TCM result](https://github.com/kiku2333/WhoColor-updates/tree/master/clusterResult) is stored in this repository under clusterResult folder.
     * The csv files with -after-join are the results used in the plug in.
     * The csv files without -after-join are the original cluster result without joining similar groups
@@ -23,5 +23,9 @@ The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` a
 
 ## Added Tabs
 * ``Camps``: Shows the user group result. 
+    * The right bar lists all groups found for current page with its percentage of contribution.
+    * Click on the plus sign before group name to expand/collapse the group. The editors in this group who contributed to this article will be shown after expand the group. Some editors' name are not shown completely, move the mouse to the editor to show full name. 
+    * Click on the group name on the right bar to color/uncolor the group and its corresponding tokens. The max number of color allowed are 20. Top 3 groups are colored automatically once the tab is open.
+    * The tokens added by anonymous editors are shown in light gray. 
 * ``Warring Camps``: Shows the group conflict result. 
 
