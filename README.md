@@ -13,7 +13,7 @@ Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and
 
 # WhoColor Tabs
 The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` are from the original WhoColor. ``Camps`` and  ``Warring Camps`` are added in this update version.\
-**Note: There is a selection part above the tabs. This part is used for testing, and will be removed later. The selection part allows you to select the mode. TCM shows the results obtained with TCM articles. All Data shows the results obtained with all data. Finally we will remove the TCM part, since it only used for testing.\Currently, you need to manually select the mode and click on the change mode button to load the data. If the chagne mode is not clicked, the results for Camps and Warring Camps will not shown.**
+**Note: There is a selection part above the tabs. This part is used for testing, and will be removed later. The selection part allows you to select the mode. TCM shows the results obtained with TCM articles. All Data shows the results obtained with all data. Finally we will remove the TCM part, since it only used for testing.<br />Currently, you need to manually select the mode and click on the change mode button to load the data. If the chagne mode is not clicked, the results for Camps and Warring Camps will not shown.<br />**
 * [TCM result](https://github.com/kiku2333/WhoColor-updates/tree/master/clusterResult) is stored in this repository under clusterResult folder.
     * The csv files with -after-join are the results used in the plug in.
     * The csv files without -after-join are the original cluster result without joining similar groups
