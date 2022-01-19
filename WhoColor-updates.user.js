@@ -1962,10 +1962,7 @@ Wikiwho = {
                 continue;
             }
             var group_score = Wikiwho.sortedGroupInfo[i][1];
-            //var authentry = $('<li id="group-'+group_id+'"><span class="group-score group-info">'+group_score.toFixed(1)+'%</span></li>').appendTo(authorListBox);
             var plus_sign_url = "https://upload.wikimedia.org/wikipedia/commons/9/9e/Plus_symbol.svg";
-            //$('<span class="wwhouserinfoicon"><img src="'+ plus_sign_url + '" class="wwhouserinfoicon"/></span>').appendTo(authentry);
-            //$('<span class="group-info">Group-'+group_id+'</span>').appendTo(authentry);
             var authentry = $('<li id="group-'+group_id+'"><div class="wwhouserinfoicon"><img src="'+ plus_sign_url + '" class="wwhouserinfoicon"/></div></li>').appendTo(authorListBox);
             $('<div class="group-info"><span>Group-'+group_id+'</span>' + '<span class="group-score">'+group_score.toFixed(1)+'%</span></div>').appendTo(authentry);
             var warring_camp_list = '';
@@ -1997,7 +1994,6 @@ Wikiwho = {
                 counter++;
             }
             Wikiwho.numOfWarringGroups[group_id] = counter;
-            //console.log(Wikiwho.numOfWarringGroups);
             // Remove groups whose all warring groups has a mutual revert less than 3
             if (warring_camp_list.length == 0){
                 $('#group-'+group_id).remove();
