@@ -32,7 +32,7 @@ The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` a
     * The right bar lists all groups found for current page with its percentage of contributions.
     * Click on the plus sign before group name to expand/collapse the group. The fighting groups will be shown after expand the group. The fighting groups are sorted by mutual revert. The fighting groups with a mutual revert less than 3 is ignored. 
     * Mutual revert is the number of times two groups revert each other. (sum of groupA revert groupB and groupB revert groupA)
-    * Click on the group name on the right bar to color/uncolor the group and its corresponding tokens. Only 1 colored group are allowed.
+    * Click on the group name on the right bar to color/uncolor the group and its corresponding tokens. Only 1 colored group is allowed.
     * The tokens are colored with different brightness. The brightness is determined by the number of times the token is edited by current group's fighting groups. Darker color indicates more edits, lighter color indicates less edits.
     * Click on the fight groups to color/uncolor the fighting groups and its corresponding tokens. The color is a contrast color with the parent group. The fighting groups with larger mutual revert has a darker color. 
     * The tokens added by anonymous editors are shown in light gray. 
