@@ -9,7 +9,7 @@ Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and
     * [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) for Firefox
 * Open [userscript](https://github.com/kiku2333/WhoColor-updates/blob/master/WhoColor-updates.user.js) and click on ``Raw`` button on the top right (as shown in the images)
 ![Screenshot](/screenshot/raw-button.PNG)
-![Screenshot](/screenshot/detailed-raw-button.PNG =x500)
+![Screenshot](/screenshot/detailed-raw-button-resized.PNG)
 * ``Tampermonkey`` or ``Greasemonkey`` will automatically detect the user script and ask to install it
 * Open an article in Wikipedia and now you should see the ``WhoColor`` to the left of the default "Read" tab in the head navigation of the articles
 
