@@ -1595,7 +1595,7 @@ Wikiwho = {
     getGroupInfo: function(){
         var groupURL = "";
         if(Wikiwho.mode == "TCM"){
-            groupURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-user-cluster-result-after-join.csv";
+            groupURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-infoMap-cluster-result-original-distance-0.5.csv";
         }
         else{
             groupURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-user-cluster-result.csv";
@@ -1809,7 +1809,7 @@ Wikiwho = {
     getWarringGroupInfo: function(){
         var revertURL = "";
         if(Wikiwho.mode == "TCM"){
-            revertURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-mutual-and-min-revert-after-join.csv";
+            revertURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-mutual-and-min-revert-threshold-0.5.csv";
         }
         else{
             revertURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-mutual-and-min-revert-greater-than-10.csv";
