@@ -1598,7 +1598,7 @@ Wikiwho = {
             groupURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-infoMap-cluster-result-original-distance-0.5.csv";
         }
         else{
-            groupURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-user-cluster-result.csv";
+            groupURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/all-data-editor-cluster-result.csv";
         }
         $.ajax({
             url: groupURL,
@@ -1812,7 +1812,7 @@ Wikiwho = {
             revertURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/TCM-mutual-and-min-revert-threshold-0.5.csv";
         }
         else{
-            revertURL = "https://raw.githubusercontent.com/kiku2333/wikipedia-project/main/All-Data-mutual-and-min-revert-greater-than-10.csv";
+            revertURL = "https://raw.githubusercontent.com/kiku2333/WhoColor-updates/master/clusterResult/all-data-mutual-and-min-revert-greater-than-10.csv";
         }
         $.ajax({
             url: revertURL,
