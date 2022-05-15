@@ -21,7 +21,7 @@ The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` a
     * The csv files without -after-join are the original cluster result without joining similar groups
     * TCM-user-cluster-result-after-join.csv stores user group info. This result is used in Camps tab.
     * TCM-mutual-and-min-revert-after-join.csv stores mutual revert and minimum revert info between each pair of groups. This result is used in Warring Camps tab.
-* [All Data result](https://github.com/kiku2333/wikipedia-project) is still not updated. Currently it is stored in another repository, and will be updated later. 
+* [All Data result](/clusterResult) is stored in this repository under clusterResult folder, with prefix all-data.
 
 ## Added Tabs
 * ``Camps``: Shows the user group result. 
