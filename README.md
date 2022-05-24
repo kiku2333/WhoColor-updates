@@ -1,5 +1,6 @@
 # WhoColor-updates
-This userscript updates the [WhoColor](https://github.com/wikiwho/WhoColor) userscript.
+This userscript updates the [WhoColor](https://github.com/wikiwho/WhoColor) userscript.\
+All results is obtained from the [wikipedia-project](https://github.com/kiku2333/wikipedia-project).
 # Installation
 Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and Firefox:
 
@@ -17,10 +18,7 @@ Install the userscript using ``Tampermonkey`` or ``Greasemonkey`` for Chrome and
 The updated WhoColor contains 5 tabs. ``Provenance``, ``Conflict`` and ``Age`` are from the original WhoColor. ``Camps`` and  ``Warring Camps`` are added in this update version.\
 **<br />Note: There is a selection part above the tabs. This part is used for testing, and will be removed later. The selection part allows you to select the mode. TCM shows the results obtained with TCM articles. All Data shows the results obtained with all data. Finally we will remove the TCM part, since it only used for testing.<br /><br />Currently, you need to manually select the mode and click on the change mode button to load the data. If the chagne mode is not clicked, the results for Camps and Warring Camps will not shown.**
 * [TCM result](/clusterResult) is stored in this repository under clusterResult folder.
-    * The csv files with -after-join are the results used in the plug in.
-    * The csv files without -after-join are the original cluster result without joining similar groups
-    * TCM-user-cluster-result-after-join.csv stores user group info. This result is used in Camps tab.
-    * TCM-mutual-and-min-revert-after-join.csv stores mutual revert and minimum revert info between each pair of groups. This result is used in Warring Camps tab.
+    * The csv files with -0.5 suffix are the results used in the plug in. 
 * [All Data result](/clusterResult) is stored in this repository under clusterResult folder, with prefix all-data.
 
 ## Added Tabs
